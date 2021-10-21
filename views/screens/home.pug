@@ -1,11 +1,10 @@
 extends ../layout/main.pug
 
 block content 
-form(action="/create", method="get")
-        button 생성 
-    each drink in drinks
-        div 아름: #{drink.name}
-        div 사이즈: #{drink.size} 
-        div 가격: #{drink.price} 원
-        div 작성일: #{drink.createdAt} 
+    form(action="/create", method="get")
+            button 생성 
+    each review in reviews
+        div 점수: #{review.score} 점
+        div 내용: #{review.content}
+        div 작성일: #{review.createdAt} 
         hr   

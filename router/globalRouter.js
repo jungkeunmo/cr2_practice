@@ -22,7 +22,11 @@ router.get("/", (req, res) => {
     };
 });
 
-router.post("/create", (req, res) => {
+router.get("/create", (req, res) => {
+    res.render("screens/create");
+});
+
+router.post("/createpost", (req, res) => {
     console.log(req.body.score);
     console.log(req.body.content);
 
